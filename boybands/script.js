@@ -23,10 +23,16 @@ for (var i = 0; i < loopCount; i += 1) {
 
   // Add the band names into the correct <div>
   currentBand = bands[i];
-  output = <p>
-  output = output + current
+  outputBand = outputBand + "<p>";
+  outputBand = outputBand + currentBand;
+  outputBand = outputBand + "</p>";
 
   // Add the veggie names into the correct <div>
   currentVeggie = vegetables[i];
-
+  outputVege = outputVege + "<p>";
+  outputVege = outputVege + currentVeggie;
+  outputVege = outputVege + "</p>";
 }
+
+bandElement.innerHTML = outputBand;
+veggieElement.innerHTML = outputVege;

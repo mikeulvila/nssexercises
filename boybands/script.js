@@ -17,22 +17,19 @@ var bandElement = document.getElementById("boy-bands");
 var veggieElement = document.getElementById("vege-tables");
 
 var outputBand = "";
-var outputVege = "";
+var outputVeggie = "";
+
 // Start looping
 for (var i = 0; i < loopCount; i += 1) {
-
   // Add the band names into the correct <div>
   currentBand = bands[i];
-  outputBand = outputBand + "<p>";
-  outputBand = outputBand + currentBand;
-  outputBand = outputBand + "</p>";
-
+  outputBand = outputBand + "<p>" + currentBand + "</p>";
+  console.log(outputBand);
   // Add the veggie names into the correct <div>
   currentVeggie = vegetables[i];
-  outputVege = outputVege + "<p>";
-  outputVege = outputVege + currentVeggie;
-  outputVege = outputVege + "</p>";
+  outputVeggie = outputVeggie + "<p>" + currentVeggie + "</p>";
+  console.log(outputVeggie);
 }
 
 bandElement.innerHTML = outputBand;
-veggieElement.innerHTML = outputVege;
+veggieElement.innerHTML = outputVeggie;

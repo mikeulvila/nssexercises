@@ -65,6 +65,8 @@ function pickConverter() {
       outputTemp.className = "red";
     } else if (outputTemp.value < 0) {
       outputTemp.className = "blue";
+    } else {
+      outputTemp.className = "green";
     }
   }
   if (radioVal === "2") {
@@ -73,6 +75,8 @@ function pickConverter() {
       outputTemp.className = "red";
     } else if (outputTemp.value < 32) {
       outputTemp.className = "blue";
+    } else {
+      outputTemp.className = "green";
     }
   }
 }

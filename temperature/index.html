@@ -9,17 +9,26 @@
   <body>
     <div>
       <h1>Temperature Converter</h1>
-      <label for="temp-input">Enter Temperature:</label>
-      <input id="temp-input" type="text" name="temperature-input">
-      <br>
-      <input id="to-celsius" type="radio" name="scale" value="1" checked>convert to Celsius
-      <input id="to-fahrenheit" type="radio" name="scale" value="2">convert to Fahrenheit
-      <br>
-      <button id="convert-button">Convert</button>
-      <button id="clear-button">Clear Input</button>
-      <br>
-      <label for="output-temp">Converted Temperature:</label>
-      <input id="output-temp" type="text" class="green">
+      <div id="list-container">
+        <ul>
+          <li>
+            <label for="temp-input">Enter Temperature:</label>
+            <input id="temp-input" type="text" name="temperature-input">
+          </li>
+          <li>
+            <input id="to-celsius" type="radio" name="scale" value="1" checked>convert to Celsius
+            <input id="to-fahrenheit" type="radio" name="scale" value="2">convert to Fahrenheit
+          </li>
+          <li>
+            <button id="convert-button">Convert</button>
+            <button id="clear-button">Clear Input</button>
+          </li>
+          <li>
+            <label for="output-temp">Converted Temperature:</label>
+            <input id="output-temp" type="text" class="green">
+          </li>
+        </ul>
+      </div>
     </div>
 	<script src="script.js"></script>
 

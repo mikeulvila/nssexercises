@@ -27,6 +27,7 @@
 
 function toCelsius (num) {
   var celsius = (num - 32) * (5 / 9);
+  celsius = Math.round(10 * celsius) / 10;
   return celsius
 }
 console.log(toCelsius(87));
@@ -38,26 +39,99 @@ function toFahrenheit (num) {
 console.log(toFahrenheit(80));
 
 // Get a reference to the button element in the DOM
+
+
 var convertButton = document.getElementById("convert-button");
 var clearButton = document.getElementById("clear-button");
-var convertedTemp = document.getElementById("converted-temp");
+var outputTemp = document.getElementById("output-temp");
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 
 function pickConverter() {
+  var inputTemp = parseInt(document.getElementById("temp-input").value);
+  console.log(inputTemp);
   var radioButtons = document.getElementsByName("scale");
   var radioVal;
   for (var i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked.) {
+    if (radioButtons[i].checked) {
       radioVal = radioButtons[i].value;
-      break;
     }
   };
   console.log(radioVal);
+  if (radioVal === "1") {
+      document.getElementById("output-temp").value = toCelsius(inputTemp);
+    }
 }
 
-// console.log("radio-value", determineConverter());
-  // console.log("event", clickEvent);
 // Assign a function to be executed when the button is clicked
 convertButton.addEventListener("click", pickConverter);
+
+// function tempFC(form) {
+//   temp = form.temp.value;
+//   if ((temp === null) || (temp === "") || (isNaN(temp))) {
+//     form.answer.value="?";
+//     form.show.value="?";
+//     alert('Please enter a temperature with numbers only. Use a period for decimal place.');
+//     form.temp.focus();
+//     form.temp.select();
+//     return false;
+//   }
+//   if (form.choice[0].checked) {
+//     var answer = temp * 9 / 5 + 32;
+//     var round = Math.round(10*answer) / 10;
+//     var text1 = "°C = ";
+//     var text2 = "°F";
+//     var text3 = "°C multiplied by 9/5 +32 = ";
+//     var text4 = "°F";
+//     form.answer.value = temp + text1 + round + text2;
+//     form.show.value = temp + text3 + round + text4;
+//   }
+//   if (form.choice[1].checked) {
+//     var answer = (temp - 32) * 5 / 9;
+//     var round=Math.round(10*answer)/10;
+//     text0 = "(";
+//     text1 = "°F = ";
+//     text2 = "°C";
+//     text3 = "°F - 32) multiplied by 5/9 = ";
+//     text4 = "°C";
+//     form.answer.value = temp + text1 + round + text2;
+//     form.show.value = text0 + temp + text3 + round + text4;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
